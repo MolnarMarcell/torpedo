@@ -66,7 +66,7 @@ class ComputerPlayer extends Player {
         return { x, y, hit };
     }  
 }
-// hajok szama jatekosonkent: 3, hajo merete 1 mező( minden hajo csak egy negyzet foglal el), megjeleniteese a jatekos hajoi zold szinnel jelennek meg, a szamitogep hajoi piros szinnel jelennek meg.
+// hajok szama jatekosonkent: 3, hajo merete 1 mező( minden hajo csak egy negyzet foglal el), megjeleniteese a jatekos hajoi zold szinnel jelennek meg, a szamitogep hajoi piros szinnel jelennek meg.megjelenese teljesen veletlenszeruen a jatekos es a szamitogep jatekterein.
 class Ship {
     constructor(size) {
         this.size = size;
@@ -74,10 +74,9 @@ class Ship {
     }
     hit() {
         this.hits++;
-    }   
+    }
     isSunk() {
         return this.hits >= this.size;
     }
 }
-// exportalas modulokhoz
-export { Player, ComputerPlayer, Ship };
+module.exports = { Player, ComputerPlayer, Ship };
